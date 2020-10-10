@@ -1,0 +1,34 @@
+def numero_quadrado(numero):
+  quadrado = numero * numero
+  return  quadrado
+
+def calcular_imc(peso, altura):
+  altura_quadrada = numero_quadrado(altura)
+  meu_imc = peso / altura_quadrada
+  
+  return meu_imc
+
+def classificar_imc(meu_imc):
+
+  if imc < 18.5:
+     print('abaixo do peso')
+  elif imc >= 18.5 and imc <= 25:
+       print('normal')
+  elif imc >= 25 and imc <= 30:
+       print('obesidade')
+  elif imc > 25.1 and imc <= 30:
+       print('normal')
+  else:
+       print('obesidade grave')
+
+
+
+peso = float(input('insira um valor: '))
+
+altura = float(input('insira um valor: '))
+
+imc = calcular_imc(peso, altura )
+
+print('seu imc é : ' , imc )
+
+classificar_imc(imc)
